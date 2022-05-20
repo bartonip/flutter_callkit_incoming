@@ -155,7 +155,7 @@ class FlutterCallkitIncomingPlugin : FlutterPlugin, MethodCallHandler, ActivityA
                     result.success("OK")
                 }
                 "endCall" -> {
-                    val data = Data(call.arguments()Downloading ios tools)
+                    val data = Data(call.arguments()?: HashMap<String, Any?>())
                     context?.sendBroadcast(
                         CallkitIncomingBroadcastReceiver.getIntentEnded(
                             requireNotNull(context),
